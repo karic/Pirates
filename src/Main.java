@@ -9,7 +9,7 @@ public class Main {
 		if (gui_only) {
 	        GUI gui = new GUI();
 	        
-	        while(lvl<3) {
+	        while(lvl<4) {
 	        gui.game.initLevel(lvl);
 			while(!gui.game.end()) {
 				gui.updateGUI();
@@ -34,7 +34,7 @@ public class Main {
 		Game game = new Game();
 		game.init();
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-		while (lvl < 3) {
+		while (lvl < 4) {
 		game.initLevel(lvl);
 		while(!game.end()) {
             game.toConsole();

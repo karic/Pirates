@@ -155,7 +155,21 @@ public class Game {
 			this.rock.add(new Ship(0,5));
 			this.pirates.add(new Pirate(8,9));
 			this.pirates.add(new Pirate(8,8));
-			this.setBoardState();	
+			this.setBoardState();
+			break;
+		case 3:
+			pirates = new ArrayList<Pirate>() ;
+			rock = new ArrayList<Ship>() ;
+			ship = new Ship(9,0);
+			goal = new Ship(0,9);
+			this.rock.add(new Ship(4,5));
+			this.rock.add(new Ship(5,4));
+			this.rock.add(new Ship(3,6));
+			this.rock.add(new Ship(6,3));
+			this.pirates.add(new Pirate(9,9));
+			this.pirates.add(new Pirate(0,0));
+			this.setBoardState();
+			break;
 
 
 		}
