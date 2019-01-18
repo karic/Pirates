@@ -35,7 +35,7 @@ public class Pirate {
 		
 	}
 	private boolean approachColumn(int m) {
-		if (this.row - m < 0) {
+		if (this.col - m < 0) {
 			this.col++;
 			return true;
 		} else if (this.col - m == 0){
