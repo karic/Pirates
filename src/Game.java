@@ -99,8 +99,8 @@ public class Game {
 				destroyedShips[i]=1;
 
 			}
-			for (int j = i + 1; j < this.rock.size(); j++) {
-    			if (this.pirates.get(i).getRow() == this.rock.get(j).getRow() && this.rock.get(i).getCol() == this.pirates.get(j).getCol()) {
+			for (int j = 0; j < this.rock.size(); j++) {
+    			if (this.pirates.get(i).getRow() == this.rock.get(j).getRow() && this.rock.get(j).getCol() == this.pirates.get(i).getCol()) {
     				destroyedShips[i]=1;
     			}
     		}

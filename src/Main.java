@@ -5,14 +5,34 @@ import java.io.InputStreamReader;
 public class Main {
 	public static void main(String[] args) {
 		boolean gui_only = true;
+		int lvl=1;
 		if (gui_only) {
 	        GUI gui = new GUI();
+	        
+	        while(lvl<3) {
+	        gui.game.initLevel(lvl);
+			while(!gui.game.end()) {
+				gui.updateGUI();
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			if (gui.game.isWon) {
+				gui.DisplayMessage("You escaped. Proceed to the next level.");
+				lvl++;
+			} else {
+				gui.DisplayMessage("You have been caught.");
+				return;
+			}
+	        }
 	        
 		} else {
 		
 		Game game = new Game();
 		game.init();
-		int lvl=1;
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		while (lvl < 3) {
 		game.initLevel(lvl);
